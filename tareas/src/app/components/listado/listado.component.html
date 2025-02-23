@@ -1,0 +1,70 @@
+<h1 class="mb-3">Conocimientos de {{ nombre }}</h1>
+
+<img [src]="url" width="30%" />
+<button class="btn btn-primary" (click)="mostrarConocimiento()">Mostrar conocimientos</button>
+<div class="row mt-4" *ngIf="mostrar">
+  <div class="col">
+    <h2 class="text-center">Formulario</h2>
+
+    <input
+      [(ngModel)]="nombreConocimiento"
+      class="form-control mb-3"
+      placeholder="Introduce conocimiento"
+      #inputNombre
+    />
+    <select
+      class="form-select mb-3"
+      #selectNivel
+      [(ngModel)]="nivelConocimiento"
+    >
+      <option value="1">Bajo</option>
+      <option value="2">Medio</option>
+      <option value="3">Alto</option>
+    </select>
+    <button class="btn btn-primary" (click)="guardarElemento()">Guardar</button>
+  </div>
+  <div class="col">
+    <h2 class="text-center">Listado de Conocimientos</h2>
+
+    
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let item of conocimiento">
+        <div class="card">
+          <div *ngIf="item.nivel === '1'">
+            <img
+              src="https://jessup.edu/wp-content/uploads/2023/12/Programming-in-Computer-Science.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+          <div *ngIf="item.nivel === '2'">
+            <img
+              src="https://www.mooc.org/hs-fs/hubfs/learn-programming-career-jpg.jpeg?width=500&name=learn-programming-career-jpg.jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+          <div *ngIf="item.nivel === '3'">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnkcUt04R_8GISbVc3puyNI9Puuyv2fBZ8Z5AR-i78B7JYCs5UPJTC0ZtlzPmSsSpYcsk&usqp=CAU"
+              class="card-img-top"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ item.nombre }}</h5>
+            <p class="card-text">
+              {{ item.nivel }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--     <ul class="list-group">
+      <li *ngFor="let item of conocimiento" class="list-group-item">
+        {{ item.nombre }} - {{ item.nivel }}
+      </li>
+    </ul> -->
+  </div>
+</div>
