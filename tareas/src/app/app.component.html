@@ -1,6 +1,49 @@
-<div class="container">
+<!-- <div class="container">
 
   <h1 class="text-center">App Angular</h1>
-  <p>Esta es la primera app angular realizada por {{autor}} para la asignatura {{asignatura}}</p>
+  <p>Esta es la primera app angular realizada por {{autor}} para la asignatura {{asignatura}}
+    Por favor seleciona que componente quieres ver
+  </p>
+
+  <select class="form-select">
+
+
+    <option value="1">Conocimientos</option>
+    <option value="2">Asignaturas</option>
+    <option value="3">Tecnologias</option>
+  </select>
   <app-listado></app-listado>
+  <app-asignaturas></app-asignaturas>
+  <app-tecnologias></app-tecnologias>
+</div>
+ -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>

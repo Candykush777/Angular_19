@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   autor= 'Eduardo Afán';
   asignatura= 'Desarrollo entorno Cliente';
+  seleccion=1;
+
 }
