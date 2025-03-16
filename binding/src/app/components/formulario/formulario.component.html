@@ -1,0 +1,24 @@
+<div class="container mt-5 bg-light p-5 rounded shadow-lg border border-primary w-50 ">
+    <h2 class="text-center mb-4">Formulario</h2>
+    <form class="form-group">
+        <div class="mb-3">
+            <label for="nombre" class="form-label mb-2">Nombre</label>
+            <input type="text" class="form-control mb-2" id="nombre" name="nombre" [(ngModel)]="nombre" placeholder="Ingrese su nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="edad" class="form-label mb-2">Edad</label>
+            <input type="number" class="form-control" id="edad" name="edad" [(ngModel)]="edad" placeholder="Ingrese su edad" required>
+        </div>
+        <button class="btn btn-primary" (click)="enviarDatos()">Enviar</button>
+    </form>
+</div>
+
+<div class="container vista">
+
+    <h2 class="text-center mb-4">Vista</h2>
+    <p>Nombre: {{ nombre }}</p>
+    <p>Edad: {{ edad }}</p> 
+</div>
+
+
+
