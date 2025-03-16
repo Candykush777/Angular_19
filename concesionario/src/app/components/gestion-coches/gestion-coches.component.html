@@ -69,50 +69,72 @@
         </div>
 
         <div class="form-group">
-
-<label for="matricula" class="form-label">Matricula</label>
-<input type="text" class="form-control" id="matricula" name="matricula" [(ngModel)]="nuevoCoche.matricula" required>
-
-
+          <label for="matricula" class="form-label">Matricula</label>
+          <input
+            type="text"
+            class="form-control"
+            id="matricula"
+            name="matricula"
+            [(ngModel)]="nuevoCoche.matricula"
+            required
+          />
         </div>
 
         <div class="form-group">
-
-<label for="precio" class="form-label">Precio</label>
-<input type="number" class="form-control" id="precio" name="precio" [(ngModel)]="nuevoCoche.precio" required min="1">
-
+          <label for="precio" class="form-label">Precio</label>
+          <input
+            type="number"
+            class="form-control"
+            id="precio"
+            name="precio"
+            [(ngModel)]="nuevoCoche.precio"
+            required
+            min="1"
+          />
         </div>
-
 
         <div class="form-group">
-
-            <label for="imagen" class="form-label">Imagen URL</label>
-            <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="nuevoCoche.imagen" required>
-
-
-
+          <label for="imagen" class="form-label">Imagen URL</label>
+          <input
+            type="text"
+            class="form-control"
+            id="imagen"
+            name="imagen"
+            [(ngModel)]="nuevoCoche.imagen"
+            required
+          />
         </div>
 
-        <button type="submit" class="btn btn-primary mt-3">Agregar Coche</button>
+        <button type="submit" class="btn btn-primary mt-3">
+          Agregar Coche
+        </button>
       </form>
       <div class="mt-4">
         <h3 class="text-center">Lista de Coches</h3>
         <div class="row">
-
           @for(coche of coches; track $index) {
           <div class="col-md-4">
             <div class="card">
-              <img [src]=" 'assets/ferrari.webp' " class="card-img-top" alt="{{ coche.marca }} {{ coche.modelo }}">
-              <div class="card-body">
+              <img
+                [src]="
+                  'https://www.amalgamcollection.com/cdn/shop/files/M5938FerrariF501-18marketingphoto_8_WIDEEDIT_2000x850_crop_center.jpg?v=1724835144'
+                "
+                class="card-img-top"
+                alt="{{ coche.marca }} {{ coche.modelo }}"
+              />
+              <div class="card-body mb-5">
                 <h5 class="card-title">{{ coche.marca }} {{ coche.modelo }}</h5>
                 <p class="card-text">CV: {{ coche.cv }} | CC: {{ coche.cc }}</p>
                 <p class="card-text">Tipo de motor: {{ coche.tipoMotor }}</p>
                 <p class="card-text">Matrícula: {{ coche.matricula }}</p>
-                <p class="card-text">Precio: {{ coche.precio | currency:'EUR' }}</p>
+                <p class="card-text">
+                  Precio: {{ coche.precio | currency : "EUR" }}
+                </p>
               </div>
             </div>
           </div>
-        }
+          }
+        </div>
       </div>
     </div>
   </div>

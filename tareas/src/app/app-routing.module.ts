@@ -7,9 +7,13 @@ import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
   {path:"",redirectTo: 'asignaturas', pathMatch:"full"},
-  { path: 'asignaturas', component: AsignaturasComponent },
-  { path: 'tecnologias', component: TecnologiasComponent },
-  { path: 'listado', component: ListadoComponent },
+  { path: 'asignaturas/5', component: AsignaturasComponent },
+  { path: 'tecnologias', component: TecnologiasComponent, children: [
+    {path: 'angular', component: AsignaturasComponent},
+    {path: 'react', component: ListadoComponent},
+    
+  ] },
+  { path: 'listado/:id', component: ListadoComponent },
   { path: '**', component: ErrorComponent },
 ];
 
