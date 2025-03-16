@@ -35,7 +35,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" [routerLink]="['/asignaturas',5]" routerLinkActive="active">Asignaturas</a>
+          <a class="nav-link active" [routerLink]="['/asignaturas',seleccion]" routerLinkActive="active">Asignaturas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/tecnologias']" routerLinkActive="active">Tecnologia</a>
@@ -47,6 +47,14 @@
     </div>
   </div>
 </nav>
+<select name="" id="" class="form-select" [(ngModel)]="seleccion">
+
+  <option value="1">Angular</option>
+  <option value="2">React</option>
+  <option value="3">Vue</option>  
+  <option value="4">Java</option>  
+  <option value="5">Python</option>  
+</select>
 <div class="container">
   <router-outlet></router-outlet>
 </div>
