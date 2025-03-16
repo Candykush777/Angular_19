@@ -1,0 +1,11 @@
+<form class="form-group p-5 mb-5 mt-5">
+    <label for="check" class="form-label">Check-Box</label><br>
+    <input type="checkbox" [(ngModel)]="mostrarfrase" name="mostrarfrase" id="mostrarfrase">
+</form>
+
+
+<div class="mostrar text-center p-5 mb-5 mt-5" *ngIf="mostrarfrase">
+    <p>Esta frase se muestra y se oculta</p>
+</div>
+
+
