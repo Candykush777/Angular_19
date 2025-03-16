@@ -1,0 +1,24 @@
+<form class="form-control p-5 mb-5 mt-5">
+    <label for="edad" class="form-label">Introduce tu edad</label>
+    <input type="number" 
+           class="form-control" 
+           name="edad" 
+           [(ngModel)]="edad">
+
+    <button type="button" 
+            class="btn btn-primary mt-3"
+            (click)="mostrar()">Validar edad</button>
+</form>
+
+<div class="container text-center">
+    <div *ngIf="mostrarMensaje && edad < 18" class="alert alert-danger mt-3">
+        Lo siento, acceso restringido para menores de 18 años
+    </div>
+
+    <div *ngIf="mostrarMensaje && edad >= 18" class="alert alert-success mt-3">
+        Bienvenido, tienes acceso permitido
+    </div>
+</div>
+
+
+
