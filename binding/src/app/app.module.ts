@@ -9,6 +9,7 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SelectorComponent } from './components/selector/selector.component';
 import { MostrarOcultarComponent } from './components/mostrar-ocultar/mostrar-ocultar.component';
 import { ValidadionEdadComponent } from './components/validadion-edad/validadion-edad.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ValidadionEdadComponent } from './components/validadion-edad/validadion
     SelectorComponent,
     MostrarOcultarComponent,
     ValidadionEdadComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

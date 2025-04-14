@@ -5,8 +5,10 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { MostrarOcultarComponent } from './components/mostrar-ocultar/mostrar-ocultar.component';
 import { SelectorComponent } from './components/selector/selector.component';
 import { ValidadionEdadComponent } from './components/validadion-edad/validadion-edad.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
+   { path: '', component: HomeComponent }, 
   { path: 'formulario', component: FormularioComponent },
   { path: 'checkbox', component: CheckboxComponent },
   { path: 'mostrar-ocultar', component: MostrarOcultarComponent },
