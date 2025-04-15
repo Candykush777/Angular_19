@@ -1,0 +1,24 @@
+<div class="container p-5 text-center" [ngSwitch]="estadoPedido">
+  <div *ngSwitchCase="'pendiente'" class="alert alert-warning">
+    Tu pedido está pendiente de envío.
+  </div>
+
+  <div *ngSwitchCase="'enviado'" class="alert alert-info">
+    Tu pedido ha sido enviado.
+  </div>
+
+  <div *ngSwitchCase="'entregado'" class="alert alert-success">
+    Tu pedido ha sido entregado.
+  </div>
+
+  <div *ngSwitchDefault class="alert alert-secondary">
+    No hay información del pedido.
+  </div>
+</div>
+
+<div class="text-center mt-3">
+  <button class="btn btn-primary" (click)="generarEstado()">
+    Consultar estado del pedido
+  </button>
+</div>  
+

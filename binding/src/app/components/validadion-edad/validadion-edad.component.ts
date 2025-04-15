@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 })
 export class ValidadionEdadComponent {
     edad: number = 0;
+    edadValidada: number=0;
     mostrarMensaje: boolean = false;
 
     mostrar() {
+      this.edadValidada = this.edad; 
         this.mostrarMensaje = true;
     }
 }

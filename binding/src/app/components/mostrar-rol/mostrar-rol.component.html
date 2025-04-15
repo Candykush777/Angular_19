@@ -1,0 +1,17 @@
+<div class="container p-5">
+  <div class="admin cotainer" *ngIf="rol === 'admin'">
+    <h2 class="text-center">Eres el Administrador</h2>
+  </div>
+  <div class="editor container" *ngIf="rol === 'editor'">
+    <h2 class="text-center">Eres el Editor</h2>
+  </div>
+  <div class="invitado container" *ngIf="rol === 'invitado'">
+    <h2 class="text-center">Eres el Invitado</h2>
+  </div>
+  <div class="text-center mt-3">
+    <button class="btn btn-primary me-2" (click)="rol = 'admin'">Administrador</button>
+    <button class="btn btn-secondary me-2" (click)="rol = 'editor'">Editor</button>
+    <button class="btn btn-success" (click)="rol = 'invitado'">Invitado</button>
+  </div>
+  
+</div>

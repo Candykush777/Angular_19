@@ -1,0 +1,35 @@
+<div class="container p-5 text-center">
+  <div class="container">
+    <label class="p-3" for="idioma"><h1>Selecciona un Idioma</h1></label>
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      [(ngModel)]="idioma"
+    >
+      <option value="" selected>--Selecciona un idioma--</option>
+      <option value="español">Español</option>
+      <option value="ingles">Inglés</option>
+      <option value="frances">Francés</option>
+    </select>
+  </div>
+
+  <div class="container p-5 text-center" [ngSwitch]="idioma">
+    <div class="alert alert-primary" *ngSwitchCase="'español'" >
+      <h2>Hola ¿Cómo estás?</h2>
+    </div>
+
+    <div class="alert alert-secondary" *ngSwitchCase="'ingles'">
+      <h2>Hello ¡¡ How are you?</h2>
+    </div>
+
+    <div class="alert alert-success" *ngSwitchCase="'frances'">
+      <h2>Bonjour! Comment ça va?</h2>
+    </div>
+
+    <div class="alert alert-warning" *ngSwitchDefault>
+      <h2>Por favor, selecciona un idioma.</h2>
+    </div>
+
+   
+  </div>
+</div>

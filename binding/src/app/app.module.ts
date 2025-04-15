@@ -10,6 +10,9 @@ import { SelectorComponent } from './components/selector/selector.component';
 import { MostrarOcultarComponent } from './components/mostrar-ocultar/mostrar-ocultar.component';
 import { ValidadionEdadComponent } from './components/validadion-edad/validadion-edad.component';
 import { HomeComponent } from './components/home/home.component';
+import { MostrarRolComponent } from './components/mostrar-rol/mostrar-rol.component';
+import { EstadoPedidoComponent } from './components/estado-pedido/estado-pedido.component';
+import { SeleccionIdiomaComponent } from './components/seleccion-idioma/seleccion-idioma.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { HomeComponent } from './components/home/home.component';
     MostrarOcultarComponent,
     ValidadionEdadComponent,
     HomeComponent,
+    MostrarRolComponent,
+    EstadoPedidoComponent,
+    SeleccionIdiomaComponent,
   ],
   imports: [
     BrowserModule,

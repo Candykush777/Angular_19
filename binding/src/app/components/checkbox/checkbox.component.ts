@@ -10,8 +10,4 @@ export class CheckboxComponent {
 
   mostrarfrase = false;
 
-  semuestra() {
-    this.mostrarfrase = !this.mostrarfrase;
-  }
-
 }
