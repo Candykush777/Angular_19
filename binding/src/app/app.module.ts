@@ -13,6 +13,8 @@ import { HomeComponent } from './components/home/home.component';
 import { MostrarRolComponent } from './components/mostrar-rol/mostrar-rol.component';
 import { EstadoPedidoComponent } from './components/estado-pedido/estado-pedido.component';
 import { SeleccionIdiomaComponent } from './components/seleccion-idioma/seleccion-idioma.component';
+import { IconoDinamicoComponent } from './components/icono-dinamico/icono-dinamico.component';
+import { ListadoProductosComponent } from './components/listado-productos/listado-productos.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { SeleccionIdiomaComponent } from './components/seleccion-idioma/seleccio
     MostrarRolComponent,
     EstadoPedidoComponent,
     SeleccionIdiomaComponent,
+    IconoDinamicoComponent,
+    ListadoProductosComponent,
   ],
   imports: [
     BrowserModule,

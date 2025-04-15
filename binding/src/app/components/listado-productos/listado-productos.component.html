@@ -1,0 +1,16 @@
+<div class="container p-5">
+    <div class="container bg-dark p-1">
+    
+      <div class="tapete d-flex flex-wrap justify-content-between">
+       
+        <div *ngFor="let item of productos" class="card mb-3" style="width: 10rem;">
+          <img [src]="item.img" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{item.nombre}}</h5>
+            <p class="card-text">Precio: {{ item.precio | currency:'EUR':'symbol':'1.2-2' }}</p>
+            <p class="card-text">Tipo: {{item.tipo}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

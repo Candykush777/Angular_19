@@ -1,0 +1,48 @@
+<div class="container p-5 text center">
+  <div class="container text-center">
+    <label  for="idioma"><h1>Selecciona un Icono</h1></label>
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      [(ngModel)]="tipoArchivo"
+    >
+      <option value="" selected>Seleciona Icono</option>
+      <option value="pdf">PDF</option>
+      <option value="doc">DOC</option>
+      <option value="img">IMG</option>
+    </select>
+  </div>
+
+  <div class="container mt-3 text-center" [ngSwitch]="tipoArchivo">
+    <div
+      *ngSwitchCase="'pdf'"
+      class="d-flex justify-content-center align-items-center"
+    >
+      <img
+        class="w-50"
+        src="https://i.blogs.es/ed1490/pdf/1366_521.jpg"
+      />
+    </div>
+    <div
+      *ngSwitchCase="'doc'"
+      class="d-flex justify-content-center align-items-center"
+    >
+      <img
+        class="w-50"
+        src="https://cdn-icons-png.flaticon.com/512/8242/8242986.png"
+      />
+    </div>
+    <div
+      *ngSwitchCase="'img'"
+      class="d-flex justify-content-center align-items-center"
+    >
+      <img
+        class="rounded-circle w-50"
+        src="https://webevolmind.b-cdn.net/wp-content/uploads/2019/07/%C2%BFPor-que-es-util-la-imagen-como-recurso-educativo.webp"
+      />
+    </div>
+    <div class="alert alert-success" *ngSwitchDefault>
+      <h2>No hay ningún icono seleccionado</h2>
+    </div>
+  </div>
+</div>
