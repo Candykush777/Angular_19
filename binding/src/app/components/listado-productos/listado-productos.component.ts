@@ -9,6 +9,7 @@ import { Ingrediente } from './listado-productos.model';
 })
 export class ListadoProductosComponent {
 
+
   productos: Ingrediente[] = [
     { nombre: 'Tomate', precio: 1.5, tipo: 'Verdura', img: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Tomato_je.jpg' },
     { nombre: 'Lechuga', precio: 2.0, tipo: 'Verdura', img: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Lettuce_in_Field_%285441653254%29.jpg' },
@@ -31,6 +32,15 @@ export class ListadoProductosComponent {
     { nombre: 'Yogur', precio: 1.4, tipo: 'Lácteos', img: 'https://upload.wikimedia.org/wikipedia/commons/e/e2/Yogurt_in_glass.jpg' },
     { nombre: 'Mantequilla', precio: 2.8, tipo: 'Lácteos', img: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Butter.jpg' }
   ];
+
+/* 
+  eliminar(_t6: Ingrediente) {
+
+
+
+    this.productos=this.productos.filter((item)=> item !== )
+    } */
+
   
   
   

@@ -1,5 +1,6 @@
 <div class="container mt-4">
   <div class="row">
+    <!-- Columna izquierda: Formulario -->
     <div class="col-md-6">
       <h2 class="text-center text-primary">Formulario de coche</h2>
       <form (ngSubmit)="agregarCoche()">
@@ -109,11 +110,15 @@
           Agregar Coche
         </button>
       </form>
+    </div>
+
+    <!-- Columna derecha: Lista de coches -->
+    <div class="col-md-6">
       <div class="mt-4">
         <h3 class="text-center">Lista de Coches</h3>
         <div class="row">
           @for(coche of coches; track $index) {
-          <div class="col-md-4">
+          <div class="col-md-12 mb-3">
             <div class="card">
               <img
                 [src]="
@@ -122,7 +127,7 @@
                 class="card-img-top"
                 alt="{{ coche.marca }} {{ coche.modelo }}"
               />
-              <div class="card-body mb-5">
+              <div class="card-body">
                 <h5 class="card-title">{{ coche.marca }} {{ coche.modelo }}</h5>
                 <p class="card-text">CV: {{ coche.cv }} | CC: {{ coche.cc }}</p>
                 <p class="card-text">Tipo de motor: {{ coche.tipoMotor }}</p>
@@ -139,3 +144,4 @@
     </div>
   </div>
 </div>
+

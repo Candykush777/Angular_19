@@ -15,6 +15,7 @@ import { EstadoPedidoComponent } from './components/estado-pedido/estado-pedido.
 import { SeleccionIdiomaComponent } from './components/seleccion-idioma/seleccion-idioma.component';
 import { IconoDinamicoComponent } from './components/icono-dinamico/icono-dinamico.component';
 import { ListadoProductosComponent } from './components/listado-productos/listado-productos.component';
+import { ListaNombresComponent } from './components/lista-nombres/lista-nombres.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ListadoProductosComponent } from './components/listado-productos/listad
     SeleccionIdiomaComponent,
     IconoDinamicoComponent,
     ListadoProductosComponent,
+    ListaNombresComponent,
   ],
   imports: [
     BrowserModule,

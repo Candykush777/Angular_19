@@ -11,6 +11,7 @@ import { EstadoPedidoComponent } from './components/estado-pedido/estado-pedido.
 import { SeleccionIdiomaComponent } from './components/seleccion-idioma/seleccion-idioma.component';
 import { IconoDinamicoComponent } from './components/icono-dinamico/icono-dinamico.component';
 import { ListadoProductosComponent } from './components/listado-productos/listado-productos.component';
+import { ListaNombresComponent } from './components/lista-nombres/lista-nombres.component';
 
 const routes: Routes = [
    { path: '', component: HomeComponent }, 
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'seleccion-idioma', component: SeleccionIdiomaComponent },
   { path: 'icono-dinamico', component: IconoDinamicoComponent },
   { path: 'listado-productos', component: ListadoProductosComponent },
+  { path: 'lista-nombres', component: ListaNombresComponent },
 ];
 
 @NgModule({
