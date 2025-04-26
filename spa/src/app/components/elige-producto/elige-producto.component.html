@@ -1,16 +1,77 @@
 <div class="container espacio mt-4">
+  <div class="container">
     <h1 class="text-center mb-5">Filtra tus productos preferidos</h1>
-    <div class="container filtros"></div>
-    <div class="row">
-      <div class="col-md-4 mb-4" *ngFor="let producto of productos">
-        <div class="card h-100 shadow-sm">
-          <img [src]="producto.thumbnail" class="card-img-top" alt="{{ producto.title }}">
-          <div class="card-body">
-            <h5 class="card-title">{{ producto.title }}</h5>
-            <p class="card-text text-muted">{{ producto.category }}</p>
-            <p class="card-text fw-bold">{{ producto.price | currency:'EUR'}}</p>
-          </div>
+
+    <app-producto-detalle [producto]="productoSeleccionado"></app-producto-detalle>
+
+    <div class="container p-5 mb-5">
+      <div class="container p-1 w-50">
+        <select
+          class="form-select p-1"
+          [(ngModel)]="selectedCategory"
+          (change)="filterProducts()"
+          aria-label="Default select example"
+          id="selectCategoria"
+        >
+          <option value="" selected>Elige la categoría que quieras</option>
+          <option value="beauty">Beauty</option>
+          <option value="fragances">Fragances</option>
+          <option value="furniture">Furniture</option>
+          <option value="groceries">Groceries</option>
+        </select>
+      </div>
+
+      <div class="container p-1 w-50">
+        <select
+          class="form-select p-1"
+          [(ngModel)]="selectedBrand"
+          (change)="filterProducts()"
+          aria-label="Default select example"
+          id="selectMarca"
+        >
+          <option value="" selected>Elige la marca que quieras</option>
+          <option value="Annibale Colombo">Annibale Colombo</option>
+          <option value="Bath Trends">Bath Trends</option>
+          <option value="Calvin Klein">Calvin Klein</option>
+          <option value="Chanel">Chanel</option>
+          <option value="Chic Cosmetic">Chic Cosmetic</option>
+          <option value="Dior">Dior</option>
+          <option value="Dolce & Gabana">Dolce & Gabana</option>
+          <option value="Glamour Beauty">Glamour Beauty</option>
+          <option value="Gucci">Gucci</option>
+          <option value="Essence">Essence</option>
+          <option value="Furniture Co">Furniture Co</option>
+          <option value="Knoll">Knoll</option>
+          <option value="Nail Couture">Nail Couture</option>
+          <option value="Velvet Touch">Velvet Touch</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="container filtros"></div>
+  <div class="row">
+    <div
+      class="col-md-4 mb-4"
+      *ngFor="let producto of productos"
+      (click)="seleccionarProducto(producto)"
+      style="cursor: pointer;"
+    >
+      <div class="card h-100 shadow-sm">
+        <img
+          [src]="producto.thumbnail"
+          class="card-img-top"
+          alt="{{ producto.title }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ producto.title }}</h5>
+          <p class="card-text text-muted">{{ producto.category }}</p>
+          <p class="card-text fw-bold">
+            {{ producto.price | currency : "EUR" }}
+          </p>
         </div>
       </div>
     </div>
   </div>
+</div>
+

@@ -1,0 +1,19 @@
+<!-- producto-detalle.component.html -->
+<div *ngIf="producto" class="card mx-auto p-3 mb-4" style="width: 22rem;">
+    <img
+      [src]="producto.thumbnail"
+      class="card-img-top rounded"
+      alt="{{ producto.title }}"
+    />
+    <div class="card-body text-center">
+      <h5 class="card-title">{{ producto.title }}</h5>
+      <p class="card-text text-muted">{{ producto.brand }}</p>
+      <p class="card-text fw-bold">{{ producto.price | currency:'EUR' }}</p>
+    </div>
+  </div>
+  
+  <div *ngIf="!producto" class="text-muted text-center p-5">
+    Selecciona un producto para ver más.
+  </div>
+  
+  

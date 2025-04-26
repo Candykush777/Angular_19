@@ -5,6 +5,7 @@ export interface Producto {
     thumbnail: string;
     category:string;
     price:number;
+    brand:string;
    
   }
   
