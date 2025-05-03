@@ -1,0 +1,32 @@
+<div class="container my-4">
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <select class="form-select"
+                [(ngModel)]="selectedCategoriaSlug"
+                (ngModelChange)="onCategoriaChange($event)">
+          <!-- Usamos cat.slug para el value y cat.name para mostrar -->
+          <option *ngFor="let cat of categorias" [value]="cat.slug">
+            {{ cat.name | titlecase }} <!-- Aplicamos titlecase al name -->
+          </option>
+        </select>
+      </div>
+    </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3" *ngFor="let prod of productos">
+        <div class="card h-100">
+          <img [src]="prod.thumbnail" class="card-img-top" [alt]="prod.title">
+          <div class="card-body">
+            <h5 class="card-title">{{ prod.title }}</h5>
+            <p class="card-text">{{ prod.description }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Price: {{ prod.price | currency }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  

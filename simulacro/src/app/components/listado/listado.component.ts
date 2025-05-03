@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Libro } from '../../models/libro.model';
 import { ApiConexionService } from '../../services/api-conexion.service';
 import { log } from 'console';
@@ -11,7 +11,7 @@ import {CommonModule } from '@angular/common';
   templateUrl: './listado.component.html',
   styleUrl: './listado.component.css',
 })
-export class ListadoComponent {
+export class ListadoComponent implements OnInit{
   libros: Libro[] = [];
 
   constructor(private api: ApiConexionService) {}
