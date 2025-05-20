@@ -8,18 +8,24 @@ import { Component } from '@angular/core';
 })
 export class ContarComponent {
 
-  contador: number = 0;
 
-  incrementar() {
-    this.contador += 1;
+  contador:number =0;
+
+
+  incremento(){
+
+    this.contador += 1 ;
   }
 
-  decrementar() {
-    this.contador -= 1;
+  decremento(){
+
+this.contador -= 1;
+
   }
 
-  resetear() {
-    this.contador = 0;
+  clear(){
+
+    this.contador=0;
   }
 
 }

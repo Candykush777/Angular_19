@@ -1,10 +1,10 @@
 <div class="container text-center mt-5">
     <h1 class="text-center">Contador de Pulsaciones</h1>
-    <h1>{{ contador }}</h1>
-  
-    <div class="container"  aria-label="Controles de contador">
-      <button class="btn btn-success p-3" (click)="incrementar()">+</button>
-      <button class="btn btn-danger p-3" (click)="decrementar()">-</button>
-      <button class="btn btn-secondary p-3" (click)="resetear()">R</button>
-    </div>
+
+    <h1>{{contador}}</h1>
+
+    <button type="button" class="btn btn-primary" (click)="incremento()">+</button>
+<button type="button" class="btn btn-secondary" (click)="decremento()">-</button>
+<button type="button" class="btn btn-success" (click)="clear()">R</button>
+
   </div>
