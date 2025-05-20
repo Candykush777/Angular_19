@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="text-center">Productos</h1>
+<select class="form-select" [(ngModel)]="seleccionCategory" (ngModelChange)="getCategories()">
+  <option selected>Elige la categoria que quieras</option>
+  <option value="beauty">Beauty</option>
+  <option value="fragrances">Fragrances</option>
+  <option value="furniture">Furniture</option>
+  <option value="groceries">Groceries</option>
+ 
+</select><br>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let item of listaProducts">
+      <div class="card text-center">
+        <img [src]="item.thumbnail" class="card-img-top w-50 mx-auto d-block" />
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">{{ item.category }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet />
