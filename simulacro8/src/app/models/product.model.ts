@@ -5,6 +5,12 @@ export interface Welcome {
     limit:    number;
 }
 
+export interface Categories{
+    slug: string;
+    name: string;
+    url:  string;
+}
+
 export interface Product {
     id:                   number;
     title:                string;
@@ -44,7 +50,7 @@ export enum Category {
 
 export interface Dimensions {
     width:  number;
-    height: number; 
+    height: number;
     depth:  number;
 }
 
