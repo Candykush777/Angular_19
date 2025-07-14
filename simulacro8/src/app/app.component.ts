@@ -33,10 +33,4 @@ export class AppComponent {
   }
 
 }
-/* 
-       this.conexion.getAllProducts().subscribe((res)=>{
 
-    this.listaProducts=res.products;
-    console.log(this.listaProducts);
-    
-  })  */

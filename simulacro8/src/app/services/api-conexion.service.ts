@@ -17,14 +17,12 @@ export class ApiConexionService {
 getAllProducts(category:string):Observable<any>{
   return this.http.get(`${this.uRl2}/${category}`)
 
-  /* return this.http.get(`${this.uRl}/category/${category}`); */
+ 
 
 }
   getCategoriesList(): Observable<Categories[]> {
     return this.http.get<Categories[]>(`${this.uRl}/categories`);
   }
 
-/*   getAllProducts(): Observable<any> {
-    return this.http.get(this.uRl);
-  } */
+
 }

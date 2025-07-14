@@ -1,0 +1,21 @@
+<div class="container p-5">
+  <h1 class="text-center">Lista Paises</h1>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let item of listaPaises">
+      <div class="card">
+        <img [src]="item.flags.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ item.name.common }}</h5>
+        
+
+         <ul>
+  <li *ngFor="let element of item.languages | keyvalue">
+    {{ element.value }}
+  </li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

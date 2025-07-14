@@ -6,28 +6,19 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,HttpClientModule,CommonModule],
+  imports: [RouterOutlet, HttpClientModule, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'simulacro6';
 
-listaBooks?:any[];
+  listaBooks?: any[];
 
-
-constructor(private conexion:ApiConexionService){
-
-this.conexion.getAllBooks().subscribe((res)=>{
-
-  this.listaBooks=res.data;
-  console.log(this.listaBooks);
-  
-})
-
-
-}
-
-
-
+  constructor(private conexion: ApiConexionService) {
+    this.conexion.getAllBooks().subscribe((res) => {
+      this.listaBooks = res.data;
+      console.log(this.listaBooks);
+    });
+  }
 }
